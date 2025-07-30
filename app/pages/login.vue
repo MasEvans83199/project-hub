@@ -1,3 +1,14 @@
+<script setup lang="ts">
+    const email = ref('')
+    const password = ref('')
+
+    function handleLogin() {
+        console.log('Logging in with:', email.value, password.value)
+
+        navigateTo('/dashboard')
+    }
+</script>
+
 <template>
     <div class="flex items-center justify-center min-h-[calc(100vh-160px)] bg-gray-50">
         <form
@@ -37,14 +48,3 @@
         </form>
     </div>
 </template>
-
-<script setup lang="ts">
-    const email = ref('')
-    const password = ref('')
-
-    function handleLogin() {
-        console.log('Logging in with:', email.value, password.value)
-
-        navigateTo('/dashboard')
-    }
-</script>

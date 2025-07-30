@@ -1,3 +1,15 @@
+<script setup lang="ts">
+const name = ref('')
+const email = ref('')
+const password = ref('')
+
+function handleSignup() {
+    console.log('Signing up with:', name.value, email.value, password.value)
+
+    navigateTo('/login')
+}
+</script>
+
 <template>
     <div class="flex items-center justify-center min-h-[calc(100vh-160px)] bg-gray-50">
         <form @submit.prevent="handleSignup" class="bg-white pb-8 rounded-lg shadow-md w-full max-w-md space-y-6">
@@ -32,15 +44,3 @@
         </form>
     </div>
 </template>
-
-<script setup lang="ts">
-const name = ref('')
-const email = ref('')
-const password = ref('')
-
-function handleSignup() {
-    console.log('Signing up with:', name.value, email.value, password.value)
-
-    navigateTo('/login')
-}
-</script>
